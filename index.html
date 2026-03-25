@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Desafio 3 em 7 – Descubra o que está travando suas vendas</title>
-<link href="https://script.google.com/macros/s/AKfycbwSvu4Y82WkV5iq9MA0PLf0CbAwS70hLq0W3VBECa_3hGhgD5R5zGMfCHBxtMB2QoRvhQ/exec" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
 <style>
 :root{--gold:#9d8768;--gold-light:#c4b49e;--gold-pale:#f5efe8;--gold-dark:#6b5740;--cream:#faf7f3;--cream-dark:#f0e9df;--text:#1a1410;--muted:#7a6a58;--light:#b09880;--white:#ffffff;--green:#2a6e47;--radius:18px;--rsm:10px}
 *{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
@@ -43,7 +43,6 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;bac
 .btn{width:100%;padding:16px;background:linear-gradient(135deg,var(--gold-dark) 0%,var(--gold) 100%);color:#fff;border:none;border-radius:var(--rsm);font-family:'DM Sans',sans-serif;font-size:15px;font-weight:500;cursor:pointer;transition:all .2s;display:flex;align-items:center;justify-content:center;gap:8px}
 .btn:hover{opacity:.91;transform:translateY(-1px);box-shadow:0 8px 22px rgba(107,87,64,.24)}
 .btn:disabled{opacity:.38;cursor:not-allowed;transform:none;box-shadow:none}
-/* INTRO */
 .intro-hero{text-align:center;padding:8px 0 20px}
 .intro-badge{display:inline-block;background:var(--gold-pale);border:1px solid rgba(157,135,104,.3);color:var(--gold-dark);font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;padding:5px 14px;border-radius:99px;margin-bottom:16px}
 .intro-hero h1{font-family:'Playfair Display',serif;font-size:26px;font-weight:700;line-height:1.3;color:var(--text);margin-bottom:12px}
@@ -51,7 +50,6 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;bac
 .intro-hero p{font-size:14px;color:var(--muted);line-height:1.7;margin-bottom:20px}
 .trust-row{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;margin-bottom:22px}
 .trust-item{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--muted)}
-/* LEAD */
 .lead-hero{text-align:center;padding:6px 0 20px}
 .big-emoji{font-size:38px;display:block;margin-bottom:10px}
 .lead-hero h2{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:var(--text);margin-bottom:8px;line-height:1.3}
@@ -66,7 +64,6 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;bac
 .form-f.err input{border-color:#c0392b}
 .form-f.err .ferr{display:block}
 .priv{font-size:11px;color:var(--light);text-align:center;margin-top:12px;line-height:1.6}
-/* RESULT */
 .res-hero{text-align:center;padding:4px 0 22px}
 .res-badge{display:inline-flex;align-items:center;gap:7px;background:var(--gold-pale);border:1px solid rgba(157,135,104,.3);border-radius:99px;padding:7px 18px;font-size:11px;font-weight:600;color:var(--gold-dark);margin-bottom:14px;text-transform:uppercase;letter-spacing:.06em}
 .res-hero h2{font-family:'Playfair Display',serif;font-size:23px;font-weight:700;color:var(--text);line-height:1.3;margin-bottom:10px}
@@ -83,7 +80,6 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;bac
 .offer::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold-dark),var(--gold-light))}
 .offer-tag{font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--gold);font-weight:600;margin-bottom:6px}
 .offer-name{font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:var(--text);margin-bottom:5px}
-.offer-desc{font-size:13px;color:var(--muted);line-height:1.65;margin-bottom:16px}
 .pillars{display:flex;flex-direction:column;gap:8px;margin-bottom:18px}
 .pillar{display:flex;align-items:flex-start;gap:10px;font-size:13px;color:var(--muted)}
 .pi{font-size:15px;width:20px;flex-shrink:0;margin-top:1px}
@@ -108,13 +104,10 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;bac
 <body>
 <div class="app">
   <div class="topbar"><div class="logo"><em>3 em 7</em> · desafio</div></div>
-
   <div class="prog-wrap" id="progWrap" style="display:none">
-    <div class="prog-meta"><span>Seu diagnóstico</span><span class="prog-n" id="progN">Pergunta 1 de 6</span></div>
+    <div class="prog-meta"><span>Seu diagnóstico</span><span class="prog-n" id="progN">Pergunta 1 de 4</span></div>
     <div class="prog-bar"><div class="prog-fill" id="progFill" style="width:0%"></div></div>
   </div>
-
-  <!-- INTRO -->
   <div class="screen active" id="s0">
     <div class="card">
       <div class="card-top">
@@ -135,8 +128,6 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;bac
       </div>
     </div>
   </div>
-
-  <!-- Q1 -->
   <div class="screen" id="s1">
     <div class="card">
       <div class="card-top">
@@ -153,8 +144,6 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;bac
       </div>
     </div>
   </div>
-
-  <!-- Q2 -->
   <div class="screen" id="s2">
     <div class="card">
       <div class="card-top">
@@ -171,8 +160,6 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;bac
       </div>
     </div>
   </div>
-
-  <!-- Q3 -->
   <div class="screen" id="s3">
     <div class="card">
       <div class="card-top">
@@ -190,8 +177,6 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;bac
       </div>
     </div>
   </div>
-
-  <!-- Q4 -->
   <div class="screen" id="s4">
     <div class="card">
       <div class="card-top">
@@ -209,8 +194,6 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;bac
       </div>
     </div>
   </div>
-
-  <!-- LEAD -->
   <div class="screen" id="slead">
     <div class="card">
       <div class="card-top" style="background:linear-gradient(135deg,#f0faf5,#fff)">
@@ -229,8 +212,6 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;bac
       </div>
     </div>
   </div>
-
-  <!-- RESULTADO -->
   <div class="screen" id="sresult">
     <div class="card">
       <div class="card-top" style="background:linear-gradient(135deg,var(--gold-pale),#fff8f2)">
@@ -241,13 +222,10 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;bac
         </div>
       </div>
       <div class="card-body">
-
         <div class="diag">
           <div class="diag-label">🔍 Por que você ainda não vendeu</div>
           <div id="diag-items"></div>
         </div>
-
-        <!-- PARA VOCÊ QUE -->
         <div style="margin-bottom:18px">
           <div style="font-size:11px;font-weight:600;color:var(--gold);text-transform:uppercase;letter-spacing:.08em;margin-bottom:12px">✦ O 3 em 7 é pra você que:</div>
           <div style="display:flex;flex-direction:column;gap:8px">
@@ -258,13 +236,10 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;bac
             <div style="display:flex;align-items:flex-start;gap:10px;font-size:13px;color:var(--text)"><span style="color:#2a6e47;font-size:15px;flex-shrink:0">✓</span>Quer resultado em 7 dias, não em 6 meses</div>
           </div>
         </div>
-
-        <!-- OFERTA PRINCIPAL -->
         <div class="offer">
           <div class="offer-tag">✦ O método que funcionou comigo</div>
           <div class="offer-name">Desafio 3 em 7</div>
           <div style="font-size:13px;color:var(--muted);line-height:1.6;margin-bottom:6px">Com <strong style="color:var(--text)">2 semanas de CRN</strong>, sem Instagram e sem tráfego pago, faturei <strong style="color:var(--text)">mais de R$3.000 em uma única semana.</strong> Agora entrego esse método completo em 7 dias.</div>
-
           <div class="pillars" style="margin-bottom:14px">
             <div class="pillar"><span class="pi">🏗️</span><div><strong>Dia 1:</strong> estrutura do programa nutricional</div></div>
             <div class="pillar"><span class="pi">💰</span><div><strong>Dia 2:</strong> sua oferta irresistível</div></div>
@@ -274,7 +249,6 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;bac
             <div class="pillar"><span class="pi">💬</span><div><strong>Dia 6:</strong> script de vendas pelo WhatsApp</div></div>
             <div class="pillar"><span class="pi">🏆</span><div><strong>Dia 7:</strong> aplicação, comprovação e premiação</div></div>
           </div>
-
           <div style="background:var(--gold-pale);border:1px solid rgba(157,135,104,.2);border-radius:var(--rsm);padding:13px 15px;margin-bottom:18px">
             <div style="font-size:11px;font-weight:600;color:var(--gold);text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px">🎮 Pontuação: quanto mais você aplica, mais você ganha</div>
             <div style="display:flex;flex-direction:column;gap:5px;font-size:12px;color:var(--muted)">
@@ -285,7 +259,6 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;bac
               <div style="margin-top:6px;padding-top:7px;border-top:1px solid rgba(157,135,104,.2);font-weight:600;color:var(--text);font-size:12px">🥇 Maior pontuação: 1 ano no Nutri que Lucra</div>
             </div>
           </div>
-
           <div style="margin-bottom:6px"><span class="price-de">De R$297,00</span></div>
           <div style="display:flex;align-items:baseline;gap:6px;margin-bottom:4px">
             <span style="font-size:13px;color:var(--muted)">por apenas</span>
@@ -297,12 +270,10 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;bac
           <p style="font-size:12px;color:var(--muted);text-align:center;margin-bottom:10px">⚡ Acesso liberado imediatamente</p>
           <div class="guarantee"><span>🛡️</span><div>Menos de R$0,30 por dia. O investimento se paga na primeira venda. Quem mais pontuar ganha <strong>1 ano no Nutri que Lucra.</strong></div></div>
         </div>
-
-        <!-- UPSELL: Nutri que Lucra -->
         <div style="border:1.5px solid rgba(157,135,104,.2);border-radius:var(--rsm);padding:18px;margin-bottom:18px;background:var(--gold-pale)">
           <div style="font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--gold);font-weight:600;margin-bottom:5px">✦ Quer o ecossistema completo?</div>
           <div style="font-family:'Playfair Display',serif;font-size:17px;font-weight:700;color:var(--text);margin-bottom:6px">Nutri que Lucra</div>
-          <div style="font-size:12px;color:var(--muted);line-height:1.6;margin-bottom:12px">3 em 7 incluso, mais: método completo, IA exclusiva, biblioteca científica, lives quinzenais, comunidade com +140 nutris e premiações por nível.</div>
+          <div style="font-size:12px;color:var(--muted);line-height:1.6;margin-bottom:12px">Método completo, IA exclusiva, biblioteca científica, lives quinzenais, comunidade com +140 nutris e premiações por nível.</div>
           <div style="display:flex;align-items:baseline;gap:6px;margin-bottom:3px">
             <span style="font-size:12px;color:var(--muted)">a partir de</span>
             <span style="font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:var(--gold-dark)">12x R$52,93</span>
@@ -310,168 +281,26 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;bac
           <p style="font-size:12px;color:var(--muted);margin-bottom:12px">ou R$497,00 à vista</p>
           <button class="btn" onclick="window.open('https://lastlink.com/p/C5322CE18/checkout-payment/','_blank')" style="font-size:13px;padding:12px">Quero o acesso completo ao Nutri que Lucra →</button>
         </div>
-
         <div class="social-proof">
           <div class="sp-label">Quem aplicou, vendeu:</div>
-          <div class="testimonial">
-            <div class="t-name">🏅 Criadora do método, 2 semanas de CRN</div>
-            <div class="t-text">"CRN novinho, zero seguidores, zero tráfego pago. Apliquei o método nos meus contatos e faturei mais de R$3.000 na primeira semana. É isso que ensino no 3 em 7."</div>
-          </div>
-          <div class="testimonial">
-            <div class="t-name">Camila R. , nível Estruturação 🥈</div>
-            <div class="t-text">"8 meses só em consulta avulsa. Com o script do dia 3, abordei 12 contatos do celular e fechei 2 programas na mesma semana."</div>
-          </div>
-          <div class="testimonial">
-            <div class="t-name">Priscila M. , nível Crescimento 🥇</div>
-            <div class="t-text">"O banco de objeções mudou tudo. A conversa que antes morria no preço passou a converter. Em 7 dias: R$2.400."</div>
-          </div>
-          <div class="testimonial">
-            <div class="t-name">Juliana T. , nível Estruturação 🥈</div>
-            <div class="t-text">"Depois dos dias 1 e 2 já tinha meu programa montado e a proposta pronta. Na mesma semana já estava mandando para contatos."</div>
-          </div>
+          <div class="testimonial"><div class="t-name">🏅 Criadora do método, 2 semanas de CRN</div><div class="t-text">"CRN novinho, zero seguidores, zero tráfego pago. Apliquei o método nos meus contatos e faturei mais de R$3.000 na primeira semana. É isso que ensino no 3 em 7."</div></div>
+          <div class="testimonial"><div class="t-name">Camila R. , nível Estruturação 🥈</div><div class="t-text">"8 meses só em consulta avulsa. Com o script do dia 3, abordei 12 contatos do celular e fechei 2 programas na mesma semana."</div></div>
+          <div class="testimonial"><div class="t-name">Priscila M. , nível Crescimento 🥇</div><div class="t-text">"O banco de objeções mudou tudo. A conversa que antes morria no preço passou a converter. Em 7 dias: R$2.400."</div></div>
+          <div class="testimonial"><div class="t-name">Juliana T. , nível Estruturação 🥈</div><div class="t-text">"Depois dos dias 1 e 2 já tinha meu programa montado e a proposta pronta. Na mesma semana já estava mandando para contatos."</div></div>
         </div>
       </div>
     </div>
   </div>
-
 </div>
-
 <script>
-// ⚠️ SUBSTITUA PELA URL DO SEU APPS SCRIPT
 const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwSvu4Y82WkV5iq9MA0PLf0CbAwS70hLq0W3VBECa_3hGhgD5R5zGMfCHBxtMB2QoRvhQ/exec';
-
 const answers = {};
-
-function goTo(id) {
-  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
-  document.getElementById(id).classList.add('active');
-  window.scrollTo({top:0,behavior:'smooth'});
-  const qMap = {s1:1,s2:2,s3:3,s4:4};
-  const prog = document.getElementById('progWrap');
-  const fill = document.getElementById('progFill');
-  const label = document.getElementById('progN');
-  const q = qMap[id];
-  if (q) {
-    prog.style.display = 'block';
-    fill.style.width = ((q-1)/4*100)+'%';
-    label.textContent = 'Pergunta '+q+' de 4';
-  } else if (id === 'slead') {
-    prog.style.display = 'block';
-    fill.style.width = '100%';
-    label.textContent = 'Quase lá! ✦';
-  } else {
-    prog.style.display = 'none';
-  }
-}
-
-function sel(el, q, val, btnId) {
-  el.closest('.opts').querySelectorAll('.opt').forEach(o => o.classList.remove('sel'));
-  el.classList.add('sel');
-  answers[q] = val;
-  document.getElementById(btnId).disabled = false;
-}
-
-document.getElementById('f-wpp').addEventListener('input', function(){
-  let v = this.value.replace(/\D/g,'');
-  if(v.length<=2) v=v.replace(/(\d{0,2})/,'($1');
-  else if(v.length<=7) v=v.replace(/(\d{2})(\d+)/,'($1) $2');
-  else if(v.length<=11) v=v.replace(/(\d{2})(\d{5})(\d+)/,'($1) $2-$3');
-  else v=v.replace(/(\d{2})(\d{5})(\d{4}).*/,'($1) $2-$3');
-  this.value=v;
-});
-
-function submitLead() {
-  let ok = true;
-  const nome = document.getElementById('f-nome').value.trim();
-  const wpp  = document.getElementById('f-wpp').value.trim();
-  const email= document.getElementById('f-email').value.trim();
-  const fv = (id,valid) => { document.getElementById('ff-'+id).classList.toggle('err',!valid); if(!valid) ok=false; };
-  fv('nome', nome.length > 1);
-  fv('wpp',  wpp.length >= 13);
-  fv('email', email.includes('@') && email.includes('.'));
-  if(!ok) return;
-
-  const btn = document.getElementById('btnLead');
-  btn.disabled = true;
-  btn.textContent = 'Calculando diagnóstico...';
-
-  // Monta texto do diagnóstico para registrar na planilha
-  const diagMap = {
-    'consulta_avulsa': 'Presa no ciclo da consulta avulsa',
-    'posicionamento':  'Problema de posicionamento e precificação',
-    'comunidade':      'Falta comunidade e estrutura para escalar',
-    'metodo':          'Precisa de método e sistema para crescer'
-  };
-  const q3v = answers.q3||'a', q1v = answers.q1||'a', q4v = answers.q4||'a';
-  let diagKey = 'metodo';
-  if (q3v === 'a')               diagKey = 'consulta_avulsa';
-  else if (q1v==='d'||q1v==='a') diagKey = 'posicionamento';
-  else if (q4v === 'c')          diagKey = 'comunidade';
-  const diagTexto = diagMap[diagKey];
-
-  const fd = new FormData();
-  fd.append('nome', nome); fd.append('whatsapp', wpp); fd.append('email', email);
-  Object.entries(answers).forEach(([k,v]) => fd.append(k,v));
-  fd.append('diagnostico', diagTexto);
-  const q5v = answers.q4||'a';
-  window._fd = fd;
-  fd.append('fonte', '3em7');
-  fetch(APPS_SCRIPT_URL, {method:'POST', body:fd}).catch(()=>{});
-
-  setTimeout(() => showResult(nome), 1400);
-}
-
-function showResult(nome) {
-  const first = nome.split(' ')[0];
-  const q1 = answers.q1||'a', q2 = answers.q2||'a', q3 = answers.q3||'a';
-  let title, desc, items, perfil;
-
-  // Perfil 1 , Captação: não sabe de quem ou como abordar
-  if (q2 === 'a' || q3 === 'a') {
-    perfil = 'captacao';
-    title = first+', o seu bloqueio é a <em>captação , você não sabe para quem vender</em>';
-    desc  = 'Você tem conhecimento, tem vontade, mas fica esperando a indicação cair do céu. O problema não é falta de paciente , é falta de um método para ativar quem já está ao seu redor. No 3 em 7 você vai aprender a usar seus contatos atuais para gerar as primeiras vendas sem depender de Instagram ou tráfego pago.';
-    items = [
-      {t:'Você já tem quem precisa de você', d:'Os contatos do seu celular são sua primeira lista de prospecção. Você só não sabe como ativá-los.'},
-      {t:'Indicação é imprevisível', d:'Quando para de indicar, a agenda esvazia. Você precisa de um funil que não depende de sorte.'},
-      {t:'A abordagem certa muda tudo', d:'Não é invasão , é oferecer a solução certa para quem já tem o problema. Tem script para isso.'}
-    ];
-  // Perfil 2 , Oferta: sem programa estruturado, não sabe o que vender
-  } else if (q2 === 'b' || q1 === 'a' || q1 === 'b' || q3 === 'b') {
-    perfil = 'oferta';
-    title = first+', o seu bloqueio é a <em>oferta , você não sabe como vender</em>';
-    desc  = 'Você até tenta vender, mas na hora de explicar o que é o programa, trava. Porque na verdade o programa não está estruturado , e o paciente sente isso. No 3 em 7 você vai montar sua oferta do zero: o que inclui, quanto dura, qual resultado promete e quanto cobrar.';
-    items = [
-      {t:'Consulta avulsa não tem valor percebido', d:'O paciente não compra "uma consulta" , ele compra o resultado que a consulta entrega.'},
-      {t:'Sem programa claro, você não cobra mais', d:'É impossível justificar um preço alto por algo que nem você sabe descrever direito.'},
-      {t:'Estrutura cria confiança', d:'Quando você apresenta um programa com começo, meio e fim, o paciente fecha muito mais rápido.'}
-    ];
-  // Perfil 3 , Conversão: tem programa mas trava no fechamento
-  } else {
-    perfil = 'conversao';
-    title = first+', o seu bloqueio é a <em>conversão , você trava na hora de fechar</em>';
-    desc  = 'Você já tem um programa, já aborda pessoas, mas na hora do preço a conversa esfria. Ou você baixa o valor antes de a pessoa reclamar, ou ouve "vou pensar" e nunca mais recebe resposta. No 3 em 7 você vai montar seu banco de objeções e um script de vendas que converte sem pressão.';
-    items = [
-      {t:'"Vou pensar" é objeção, não resposta', d:'Tem uma técnica para cada tipo de objeção. Sem ela, você perde venda todo dia.'},
-      {t:'Follow-up é onde o dinheiro está', d:'A maioria das vendas acontece depois do quinto contato. Quem para no primeiro deixa dinheiro na mesa.'},
-      {t:'Script não é roteiro , é segurança', d:'Quando você sabe o que falar, para de travar e a conversa flui naturalmente para o fechamento.'}
-    ];
-  }
-
-  document.getElementById('res-title').innerHTML = title;
-  document.getElementById('res-desc').textContent = desc;
-  const dc = document.getElementById('diag-items');
-  dc.innerHTML = '';
-  items.forEach((item,i) => {
-    dc.innerHTML += `<div class="diag-item"><div class="diag-dot">${i+1}</div><p><strong>${item.t}:</strong> ${item.d}</p></div>`;
-  });
-
-  // Atualiza o diagnóstico na planilha
-  const diagMap = { captacao: 'Bloqueio em captação', oferta: 'Bloqueio na oferta', conversao: 'Bloqueio na conversão' };
-  if(window._fd) { window._fd.set('diagnostico', diagMap[perfil]); }
-
-  goTo('sresult');
-}
+function goTo(id){document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));document.getElementById(id).classList.add('active');window.scrollTo({top:0,behavior:'smooth'});const qMap={s1:1,s2:2,s3:3,s4:4};const prog=document.getElementById('progWrap');const fill=document.getElementById('progFill');const label=document.getElementById('progN');const q=qMap[id];if(q){prog.style.display='block';fill.style.width=((q-1)/4*100)+'%';label.textContent='Pergunta '+q+' de 4';}else if(id==='slead'){prog.style.display='block';fill.style.width='100%';label.textContent='Quase lá! ✦';}else{prog.style.display='none';}}
+function sel(el,q,val,btnId){el.closest('.opts').querySelectorAll('.opt').forEach(o=>o.classList.remove('sel'));el.classList.add('sel');answers[q]=val;document.getElementById(btnId).disabled=false;}
+document.getElementById('f-wpp').addEventListener('input',function(){let v=this.value.replace(/\D/g,'');if(v.length<=2)v=v.replace(/(\d{0,2})/,'($1');else if(v.length<=7)v=v.replace(/(\d{2})(\d+)/,'($1) $2');else if(v.length<=11)v=v.replace(/(\d{2})(\d{5})(\d+)/,'($1) $2-$3');else v=v.replace(/(\d{2})(\d{5})(\d{4}).*/,'($1) $2-$3');this.value=v;});
+function submitLead(){let ok=true;const nome=document.getElementById('f-nome').value.trim();const wpp=document.getElementById('f-wpp').value.trim();const email=document.getElementById('f-email').value.trim();const fv=(id,valid)=>{document.getElementById('ff-'+id).classList.toggle('err',!valid);if(!valid)ok=false;};fv('nome',nome.length>1);fv('wpp',wpp.length>=13);fv('email',email.includes('@')&&email.includes('.'));if(!ok)return;const btn=document.getElementById('btnLead');btn.disabled=true;btn.textContent='Calculando diagnóstico...';const fd=new FormData();fd.append('nome',nome);fd.append('whatsapp',wpp);fd.append('email',email);Object.entries(answers).forEach(([k,v])=>fd.append(k,v));fd.append('fonte','3em7');window._fd=fd;fetch(APPS_SCRIPT_URL,{method:'POST',body:fd}).catch(()=>{});setTimeout(()=>showResult(nome),1400);}
+function showResult(nome){const first=nome.split(' ')[0];const q1=answers.q1||'a',q2=answers.q2||'a',q3=answers.q3||'a';let title,desc,items,perfil;if(q2==='a'||q3==='a'){perfil='captacao';title=first+', o seu bloqueio é a <em>captação, você não sabe para quem vender</em>';desc='Você tem conhecimento, tem vontade, mas fica esperando a indicação cair do céu. O problema não é falta de paciente, é falta de um método para ativar quem já está ao seu redor. No 3 em 7 você vai aprender a usar seus contatos atuais para gerar as primeiras vendas sem depender de Instagram ou tráfego pago.';items=[{t:'Você já tem quem precisa de você',d:'Os contatos do seu celular são sua primeira lista de prospecção. Você só não sabe como ativá-los.'},{t:'Indicação é imprevisível',d:'Quando para de indicar, a agenda esvazia. Você precisa de um funil que não depende de sorte.'},{t:'A abordagem certa muda tudo',d:'Não é invasão, é oferecer a solução certa para quem já tem o problema. Tem script para isso.'}];}else if(q2==='b'||q1==='a'||q1==='b'||q3==='b'){perfil='oferta';title=first+', o seu bloqueio é a <em>oferta, você não sabe como vender</em>';desc='Você até tenta vender, mas na hora de explicar o que é o programa, trava. Porque na verdade o programa não está estruturado, e o paciente sente isso. No 3 em 7 você vai montar sua oferta do zero: o que inclui, quanto dura, qual resultado promete e quanto cobrar.';items=[{t:'Consulta avulsa não tem valor percebido',d:'O paciente não compra uma consulta, ele compra o resultado que a consulta entrega.'},{t:'Sem programa claro, você não cobra mais',d:'É impossível justificar um preço alto por algo que nem você sabe descrever direito.'},{t:'Estrutura cria confiança',d:'Quando você apresenta um programa com começo, meio e fim, o paciente fecha muito mais rápido.'}];}else{perfil='conversao';title=first+', o seu bloqueio é a <em>conversão, você trava na hora de fechar</em>';desc='Você já tem um programa, já aborda pessoas, mas na hora do preço a conversa esfria. Ou você baixa o valor antes de a pessoa reclamar, ou ouve "vou pensar" e nunca mais recebe resposta. No 3 em 7 você vai montar seu banco de objeções e um script de vendas que converte sem pressão.';items=[{t:'"Vou pensar" é objeção, não resposta',d:'Tem uma técnica para cada tipo de objeção. Sem ela, você perde venda todo dia.'},{t:'Follow-up é onde o dinheiro está',d:'A maioria das vendas acontece depois do quinto contato. Quem para no primeiro deixa dinheiro na mesa.'},{t:'Script não é roteiro, é segurança',d:'Quando você sabe o que falar, para de travar e a conversa flui naturalmente para o fechamento.'}];}
+document.getElementById('res-title').innerHTML=title;document.getElementById('res-desc').textContent=desc;const dc=document.getElementById('diag-items');dc.innerHTML='';items.forEach((item,i)=>{dc.innerHTML+=`<div class="diag-item"><div class="diag-dot">${i+1}</div><p><strong>${item.t}:</strong> ${item.d}</p></div>`;});const diagMap={captacao:'Bloqueio em captação',oferta:'Bloqueio na oferta',conversao:'Bloqueio na conversão'};if(window._fd){window._fd.set('diagnostico',diagMap[perfil]);fetch(APPS_SCRIPT_URL,{method:'POST',body:window._fd}).catch(()=>{});}goTo('sresult');}
 </script>
 </body>
 </html>
