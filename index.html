@@ -293,8 +293,8 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;bac
   </div>
 </div>
 <script>
-const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwSvu4Y82WkV5iq9MA0PLf0CbAwS70hLq0W3VBECa_3hGhgD5R5zGMfCHBxtMB2QoRvhQ/exec';
-const answers = {};
+const APPS_SCRIPT_URL='https://script.google.com/macros/s/AKfycbwhw3Y-DPjBFx6CXzOp3xS0Q_GKh086LVVAjqWfHgQJFaEPA1QsPJ_MzupMQ7JjjF-DZw/exec';
+const answers={};
 function goTo(id){document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));document.getElementById(id).classList.add('active');window.scrollTo({top:0,behavior:'smooth'});const qMap={s1:1,s2:2,s3:3,s4:4};const prog=document.getElementById('progWrap');const fill=document.getElementById('progFill');const label=document.getElementById('progN');const q=qMap[id];if(q){prog.style.display='block';fill.style.width=((q-1)/4*100)+'%';label.textContent='Pergunta '+q+' de 4';}else if(id==='slead'){prog.style.display='block';fill.style.width='100%';label.textContent='Quase lá! ✦';}else{prog.style.display='none';}}
 function sel(el,q,val,btnId){el.closest('.opts').querySelectorAll('.opt').forEach(o=>o.classList.remove('sel'));el.classList.add('sel');answers[q]=val;document.getElementById(btnId).disabled=false;}
 document.getElementById('f-wpp').addEventListener('input',function(){let v=this.value.replace(/\D/g,'');if(v.length<=2)v=v.replace(/(\d{0,2})/,'($1');else if(v.length<=7)v=v.replace(/(\d{2})(\d+)/,'($1) $2');else if(v.length<=11)v=v.replace(/(\d{2})(\d{5})(\d+)/,'($1) $2-$3');else v=v.replace(/(\d{2})(\d{5})(\d{4}).*/,'($1) $2-$3');this.value=v;});
